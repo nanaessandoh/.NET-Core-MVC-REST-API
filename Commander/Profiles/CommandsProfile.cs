@@ -9,10 +9,15 @@ namespace Commander.Profiles
         // Constructor
         public CommandsProfile()
         {
-            // Source to target - Command(source) convert to CommandReadDTO(target) 
+            // Source -> Target
+            // For Get 
             CreateMap<Command, CommandReadDTO>();
-            // Source to target 
-            CreateMap<CommandCreateDTO, Command>();    
+            // For Post 
+            CreateMap<CommandCreateDTO, Command>();
+            // For Put 
+            CreateMap<CommandUpdateDTO, Command>(); 
+            // For Patch     
+            CreateMap<Command, CommandUpdateDTO>();
         }
         
         

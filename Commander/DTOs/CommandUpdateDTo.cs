@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Commander.DTOs
 {
-    public class CommandCreateDTO
+    public class CommandUpdateDTO
     {
         // Id will be created Automatically so leave it out
         [Required]

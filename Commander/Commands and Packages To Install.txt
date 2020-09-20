@@ -9,9 +9,30 @@ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet tool install --global dotnet-ef
 dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection // AutoMapper
+dotnet add package Microsoft.AspNetCore.JsonPatch // JsonPatch
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson // Serialiazation for JSON
 
 
 **** Migration *****
 dotnet ef migrations add V1
 dotnet ef migrations remove
 dotnet ef database update
+
+
+
+************
+
+{
+    "howTo": "How to roll back a migration",
+    "line": "dotnet ef migrations remove",
+    "platform": ".NET Core CLI"
+}
+
+Patch Command
+[
+    {
+        "op": "replace",
+        "path": "/howTo",
+        "value": "Some new value"
+    }
+]
