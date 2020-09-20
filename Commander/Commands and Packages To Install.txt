@@ -1,0 +1,17 @@
+dotnet new // list all the available projects 
+dotnet new webapi -n Commander // Commander is the name of our projects
+
+
+**** Packages to Install****
+dotnet add package Microsoft.EntityFrameworkCore 
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet tool install --global dotnet-ef
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection // AutoMapper
+
+
+**** Migration *****
+dotnet ef migrations add V1
+dotnet ef migrations remove
+dotnet ef database update
